@@ -1,0 +1,53 @@
+doctype html
+html(lang="ru")
+  include blocks/head/head
+
+  body
+    <!--[if IE 8]>
+    Вы используете <strong>устаревшую версию</strong> браузера. Пожалуйста, <a href="http://browsehappy.com/">обновите браузер</a> на официальном сайте, чтобы просматривать полную версию сайта.
+    <![endif]-->
+    main
+      include blocks/promo/promo
+      include blocks/goods/goods
+      include blocks/main-advantage/main-advantage
+      include blocks/call-to-action/call-to-action
+      include blocks/advantages/advantages
+
+      // soviet
+      section.soviet
+        .soviet__containeri
+          h2.soviet__title
+        .soviet__wrapper
+          .soviet__container
+            blockquote.soviet-bq
+              .soviet-bq__header
+                cite.soviet-bq__author-country--indonesia Imran Subagyo, Индонезия
+                span.soviet-bq__income Ежемесячный доход на Форекс: $56 000
+              img(src="images/soviet-item__avatar--imran.jpg", alt="Imran Subagyo")
+              p.soviet-bq__text Я хочу посоветовать даже опытным трейдерам начинать торговлю с новым брокером с демо-счета. Даже зная, что FBS – один из самых надежных брокеров, я сначала убедился в этом, торгуя на демо.
+
+            blockquote.soviet-bq
+              .soviet-bq__header
+                cite.soviet-bq__author-country--thailand Jamnong Suraphong, Таиланд
+                span.soviet-bq__income Ежемесячный доход на Форекс: $42 000
+              img(src="images/soviet-item__avatar--jamnong.jpg", alt="Jamnong Suraphong")
+              p.soviet-bq__text Главное качество трейдера – не давать эмоциям взять верх. Даже если вам хочется немедленно начать зарабатывать, посветите несколько дней оттачиванию своей торговой стратегии и знакомству с торговой платформой, торгуя на демо-счете. Будьте разумны, и судьба непременно вознаградит вас!
+
+            blockquote.soviet-bq
+              .soviet-bq__header
+                cite.soviet-bq__author-country--saudi-arabia Walid Aljaber, Саудовская Аравия
+                span.soviet-bq__income Ежемесячный доход на Форекс: $27 000
+              img(src="images/soviet-item__avatar--walid.jpg", alt="Walid Aljaber")
+              p.soviet-bq__text Я торгую с FBS уже больше 5 лет. Очень многие друзья, видя мои успехи, занялись тем же. Часто они просят меня научить их торговать так же успешно, как я. Я советую им открыть демо-счет и торговать, пока успехи в торговле не станут стабильными. Это универсальный и лучший вариант для всех!
+
+    //-   // footer-cta
+    //-   section.footer-cta
+    //-     .footer-cta__container
+    //-       span.footer-cta__text Не жди, когда другие заработают твои деньги!
+    //-       h2.footer-cta__title Открой демо-счет сейчас!
+    //-       button.btn Открыть счет
+
+    //- // footer
+    //- footer.footer
+    //-   .footer__container
+    //-     p.footer__text © 2009-2016 FBS Markets Inc. <br> Копирование, тиражирование, перепечатка, а равно размещение в интернете материалов сайта www.fbs.com возможно только с письменного разрешения. Связаться с нами.

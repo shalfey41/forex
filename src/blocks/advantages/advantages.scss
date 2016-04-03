@@ -1,0 +1,174 @@
+.advantages {
+  color: $color-secondary;
+  text-align: center;
+  position: relative;
+  padding-bottom: 24px;
+
+  @media (max-width: 767px) {
+    font-size: 26px;
+    padding-top: 34px;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    font-size: 28px;
+    @include font-bold;
+    text-transform: uppercase;
+
+    @media (max-width: 767px) {
+      font-size: 26px;
+      color: $color-primary;
+      line-height: 1.25;
+    }
+  }
+
+  &__item-text {
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 1.5;
+
+    @media (max-width: 767px) {
+      text-align: left;
+      padding-left: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      margin-top: 42px;
+      align-items: center;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: #a5adb8;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+
+      @media (max-width: 767px) {
+        height: 0;
+      }
+    }
+  }
+
+  &__item-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      flex-direction: row;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__item {
+    width: 121px;
+    height: 121px;
+    border: 1px solid #a5adb8;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+
+    @media (max-width: 767px) {
+      width: 87px;
+      height: 87px;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    &:before {
+      width: 110px;
+      height: 110px;
+      background-color: #739d5f;
+
+      @media (max-width: 767px) {
+        width: 78px;
+        height: 78px;
+      }
+    }
+    &:after {
+      width: 93px;
+      height: 93px;
+      background-color: $color-primary;
+
+      @media (max-width: 767px) {
+        width: 67px;
+        height: 67px;
+      }
+    }
+
+    &--dollar {
+      background: url(../images/sprite/advantage__icon--dollar.png) no-repeat center;
+
+      @media (max-width: 767px) {
+        background-size: 25%;
+      }
+    }
+    &--purse {
+      background: url(../images/sprite/advantage__icon--purse.png) no-repeat center;
+
+      @media (max-width: 767px) {
+        background-size: 42%;
+      }
+    }
+    &--support {
+      background: url(../images/sprite/advantage__icon--support.png) no-repeat center;
+
+      @media (max-width: 767px) {
+        background-size: 50%;
+      }
+    }
+    &--iphone {
+      background: url(../images/sprite/advantage__icon--iphone.png) no-repeat center;
+
+      @media (max-width: 767px) {
+        background-size: 30%;
+      }
+    }
+    &--discount {
+      background: url(../images/sprite/advantage__icon--discount.png) no-repeat center;
+
+      @media (max-width: 767px) {
+        background-size: 55%;
+      }
+    }
+
+    &--dollar,
+    &--purse,
+    &--support,
+    &--iphone,
+    &--discount {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+}

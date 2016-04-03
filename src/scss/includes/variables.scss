@@ -1,0 +1,32 @@
+// colors
+$color-primary: #558834;
+$color-secondary: #515f74;
+
+// container-width
+$container-xs: 100%;
+$container-sm: 765px;
+$container-md: 960px;
+
+@mixin container {
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: $container-md;
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    width: $container-sm;
+  }
+
+  @media (max-width: 767px) {
+    width: $container-xs;
+  }
+}
+
+// fonts
+$font-primary: "Open Sans", "Helvetica", "Arial", sans-serif;
+@mixin font-italic {
+  font-style: italic;
+}
+@mixin font-bold {
+  font-weight: 700;
+}

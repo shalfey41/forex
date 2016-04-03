@@ -1,0 +1,47 @@
+.call-to-action {
+  text-align: center;
+  background: url(../images/flying-money.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 88px;
+  padding-bottom: 125px;
+
+  @media (max-width: 767px) {
+    background: url(../images/flying-money-xs.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 28px;
+    padding-bottom: 23px;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__wrap {
+    background-color: $color-primary;
+    display: inline-block;
+    padding: 12px 38px 7px;
+
+    @media (max-width: 767px) {
+      background-color: rgba(85, 136, 52, 0);
+      padding: 0;
+      display: block;
+    }
+  }
+
+  &__title {
+    color: #fbdc2e;
+    @include font-bold;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    @media (max-width: 767px) {
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    font-size: 19px;
+    color: #fff;
+  }
+}
