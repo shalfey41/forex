@@ -37,3 +37,12 @@ figure {
 a {
   color: $color-primary;
 }
+
+.btn {
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: #558834;
+  background-color: $color-primary;
+}

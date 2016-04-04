@@ -1,0 +1,124 @@
+.soviet {
+  color: $color-secondary;
+  padding-top: 27px;
+
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
+
+  &__container {
+    @include container;
+
+    @media (max-width: 767px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__wrapper {
+    background: url(../images/soviet-bg.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 31px;
+    padding-bottom: 7px;
+
+    @media (max-width: 767px) {
+      padding-top: 0;
+      background: none;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    @include font-bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 16px;
+
+    @media (max-width: 767px) {
+      font-size: 20px;
+      padding-bottom: 22px;
+    }
+  }
+
+}
+
+.soviet-bq {
+  width: 100%;
+  margin-bottom: 26px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 13px 30px 11px;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      text-align: center;
+      padding: 13px 0 8px;
+    }
+  }
+
+  cite {
+    font-style: normal;
+    position: relative;
+  }
+
+  &__income {
+    @include font-bold;
+
+    @media (max-width: 767px) {
+      padding-top: 8px;
+    }
+
+    b {
+      font-size: 18px;
+    }
+  }
+
+  &__author-country--indonesia,
+  &__author-country--thailand,
+  &__author-country--saudi-arabia {
+    width: 29px;
+    height: 19px;
+    margin-left: 15px;
+    vertical-align: middle;
+  }
+
+  &__content {
+    display: flex;
+    background-color: #FFF;
+    padding: 14px;
+    align-items: center;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 10px 29px;
+    }
+
+    img {
+      width: 76px;
+      height: 76px;
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 24px;
+    margin-left: 20px;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+      line-height: 20px;
+      margin-left: 0;
+      padding-top: 19px;
+    }
+  }
+}

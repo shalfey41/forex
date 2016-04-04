@@ -38,7 +38,7 @@ gulp.task('serve', ['sass'], function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src("src/scss/style.scss")
+    return gulp.src("src/**/*.scss")
         .pipe(sass())
         .pipe(autoprefixer({ browsers: ['last 2 versions', '> 1%', 'IE 7']}))
         .pipe(csscomb())

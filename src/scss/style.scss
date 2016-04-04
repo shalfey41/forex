@@ -7,3 +7,39 @@
 @import "../blocks/main-advantage/main-advantage";
 @import "../blocks/call-to-action/call-to-action";
 @import "../blocks/advantages/advantages";
+@import "../blocks/soviet/soviet";
+@import "../blocks/footer-cta/footer-cta";
+
+.footer {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 42px;
+
+  @media (max-width: 767px) {
+    padding-top: 15px;
+    padding-bottom: 12px;
+  }
+
+  &__container {
+    @include container;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 21px;
+
+    @media (min-width: 992px) {
+      padding: 0 140px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
