@@ -60,8 +60,27 @@ gulp.task('jade', function () {
     .pipe(gulp.dest('src/'))
 });
 
+gulp.task('css-concat-min', function () {
+    return gulp.src('src/css/*.css')
+        .pipe(gulpif('*.css', csso()))
+        .pipe(rename("main.min.css"))
+        .pipe(gulp.dest('build/css'));
+});
+
+gulp.task('js-concat-min', function () {
+    return gulp.src('src/js/*.js')
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(rename("main.min.js"))
+        .pipe(gulp.dest('build/js'));
+});
+
+// Минификация js и css
+gulp.task('js-css-concat-min', function (cb) {
+  gulpSequence('js-concat-min', 'css-concat-min', cb);
+});
+
 // Объединяет и минифицирует css и js в html
-gulp.task('js-css-concat-min', function () {
+gulp.task('html-useref', function () {
     return gulp.src('src/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
@@ -103,18 +122,18 @@ gulp.task('sprite-png', function () {
 
 // Оптимизировать изображения
 gulp.task('img-optimize', () => {
-  return gulp.src('src/images/*')
+  return gulp.src('src/images/**')
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
         use: [pngquant()]
     }))
-    .pipe(gulp.dest('build/images'));
+    .pipe(gulp.dest('build/images/'));
 });
 
 // Build
 gulp.task('build', function (cb) {
-  gulpSequence('clean', 'js-css-concat-min', 'img-optimize', cb);
+  gulpSequence('clean', 'js-css-concat-min', 'html-useref', 'img-optimize', cb);
 });
 
 // Отправка билда на сервер
