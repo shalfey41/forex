@@ -45,4 +45,11 @@ a {
   outline: none;
   background-color: #558834;
   background-color: $color-primary;
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+  &:active {
+    background-color: $color-btn-active;
+  }
 }

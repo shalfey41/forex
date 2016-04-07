@@ -166,7 +166,6 @@ img {
  * Change font properties to `inherit` in all browsers (opinionated).
  */
 
-button,
 input {
   font: inherit;
 }
@@ -181,7 +180,6 @@ input {
  * 2. Show the overflow in Edge, Firefox, and IE.
  */
 
-button,
 input {
   /* 2 */
   overflow: visible;
@@ -192,7 +190,6 @@ input {
  * 1. Remove the margin in Firefox and Safari.
  */
 
-button,
 input {
   /* 1 */
   margin: 0;
@@ -203,16 +200,10 @@ input {
  * 1. Remove the inheritence of text transform in Firefox.
  */
 
-button {
-  /* 1 */
-  text-transform: none;
-}
-
 /**
  * Change the cursor in all browsers (opinionated).
  */
 
-button,
 [type='submit'] {
   cursor: pointer;
 }
@@ -227,7 +218,6 @@ button,
  * 2. Correct the inability to style clickable types in iOS.
  */
 
-button,
 [type='submit'] {
   -webkit-appearance: button;
   /* 2 */
@@ -330,6 +320,14 @@ a {
   background-color: #558834;
 }
 
+.btn:hover {
+  background-color: #6cad42;
+}
+
+.btn:active {
+  background-color: #3e6326;
+}
+
 .promo {
   position: relative;
   min-height: 410px;
@@ -349,6 +347,12 @@ a {
     padding-top: 10px;
     background: url(../images/promo-bg--xs.jpg) no-repeat top;
     background-size: inherit;
+  }
+}
+
+@media (min-width: 1200px) {
+  .promo {
+    background: url(../images/promo-bg--lg.jpg) no-repeat center;
   }
 }
 
@@ -1492,8 +1496,10 @@ a {
 
 .footer-cta__btn {
   font-size: 16px;
+  display: block;
   margin: 46px 139px 0;
   padding: 14px 60px;
+  text-decoration: none;
 }
 
 @media (max-width: 767px) {

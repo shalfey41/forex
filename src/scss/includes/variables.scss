@@ -2,6 +2,9 @@
 $color-primary: #558834;
 $color-secondary: #515f74;
 
+$color-btn-hover: lighten($color-primary, 10%);
+$color-btn-active: darken($color-primary, 10%);
+
 // container-width
 $container-xs: 100%;
 $container-sm: 765px;

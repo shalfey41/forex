@@ -31,25 +31,20 @@ gulp.task('serve', ['sass'], function() {
         server: "./src"
     });
 
-    gulp.watch("src/scss/*.scss", ['sass']);
+    gulp.watch("src/**/*.scss", ['sass']);
     gulp.watch("src/**/*.jade", ['jade']);
     gulp.watch("src/images/", ['move-img']);
     gulp.watch("src/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function() {
-    return gulp.src("src/**/*.scss")
+    return gulp.src("src/scss/main.scss")
         .pipe(sass())
         .pipe(autoprefixer({ browsers: ['last 2 versions', '> 1%', 'IE 7']}))
         .pipe(csscomb())
         .pipe(uncss({html: ['src/*.html']}))
         .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream());
-});
-
-gulp.task('move-img', function() {
-  return gulp.src("./src/blocks/**/images/*")
-    .pipe(gulp.dest("src/images"));
 });
 
 gulp.task('jade', function () {
@@ -60,31 +55,12 @@ gulp.task('jade', function () {
     .pipe(gulp.dest('src/'))
 });
 
-gulp.task('css-concat-min', function () {
-    return gulp.src('src/css/*.css')
-        .pipe(gulpif('*.css', csso()))
-        .pipe(rename("main.min.css"))
-        .pipe(gulp.dest('build/css'));
-});
-
-gulp.task('js-concat-min', function () {
-    return gulp.src('src/js/*.js')
-        .pipe(gulpif('*.js', uglify()))
-        .pipe(rename("main.min.js"))
-        .pipe(gulp.dest('build/js'));
-});
-
-// Минификация js и css
-gulp.task('js-css-concat-min', function (cb) {
-  gulpSequence('js-concat-min', 'css-concat-min', cb);
-});
-
 // Объединяет и минифицирует css и js в html
 gulp.task('html-useref', function () {
     return gulp.src('src/*.html')
         .pipe(useref())
-        .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', csso()))
+        .pipe(gulpif('*.js', uglify()))
         .pipe(gulp.dest('build/'));
 });
 
@@ -117,12 +93,12 @@ gulp.task('sprite-png', function () {
     cssName: 'sprite.css'
   }))
   .pipe(clean())
-  return spriteData.pipe(gulp.dest('src/images/sprite/'));
+  return spriteData.pipe(gulp.dest('src/images/'));
 });
 
 // Оптимизировать изображения
 gulp.task('img-optimize', () => {
-  return gulp.src('src/images/**')
+  return gulp.src('src/images/*.{jpg,jpeg,gif,png,svg}')
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
@@ -133,7 +109,7 @@ gulp.task('img-optimize', () => {
 
 // Build
 gulp.task('build', function (cb) {
-  gulpSequence('clean', 'js-css-concat-min', 'html-useref', 'img-optimize', cb);
+  gulpSequence('clean', 'html-useref', 'img-optimize', cb);
 });
 
 // Отправка билда на сервер
