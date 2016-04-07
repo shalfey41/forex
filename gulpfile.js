@@ -98,7 +98,7 @@ gulp.task('sprite-png', function () {
 
 // Оптимизировать изображения
 gulp.task('img-optimize', () => {
-  return gulp.src('src/images/*.{jpg,jpeg,gif,png,svg}')
+  return gulp.src('src/images/**')
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
