@@ -365,7 +365,7 @@ a {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .promo__container {
-    width: 765px;
+    width: 750px;
   }
 }
 
@@ -470,7 +470,7 @@ a {
 .offer-form {
   position: absolute;
   bottom: 0;
-  width: 226px;
+  width: 260px;
   margin-left: 564px;
 }
 
@@ -494,10 +494,10 @@ a {
 }
 
 .offer-form__title {
-  font-size: 14px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 20px;
   padding-top: 10px;
-  padding-bottom: 9px;
+  padding-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -519,7 +519,7 @@ a {
 }
 
 .offer-form__form {
-  padding: 10px 10px 2px;
+  padding: 16px 10px 2px;
   background-color: #fff;
 }
 
@@ -536,9 +536,9 @@ a {
 
 .offer-form__form input[type='text'],
 .offer-form__form input[type='email'] {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 10px;
-  padding: 4px 7px 5px;
+  padding: 7px 7px 8px;
   border: 1px solid #aeaeae;
 }
 
@@ -559,9 +559,9 @@ a {
 }
 
 .offer-form__form input[type='submit'] {
-  font-size: 14px;
-  margin-top: 14px;
-  padding: 5px;
+  font-size: 16px;
+  margin-top: 16px;
+  padding: 8px;
 }
 
 @media (max-width: 767px) {
@@ -588,7 +588,7 @@ a {
 }
 
 .offer-form label {
-  font-size: 8px;
+  font-size: 10px;
   position: relative;
   display: block;
   padding-top: 3px;
@@ -606,8 +606,8 @@ a {
   position: absolute;
   top: 4px;
   left: 0;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   content: '';
   cursor: pointer;
   border: 1px solid #000;
@@ -625,8 +625,8 @@ a {
   top: 4px;
   left: 3px;
   display: none;
-  width: 4px;
-  height: 6px;
+  width: 5px;
+  height: 8px;
   content: '';
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -665,7 +665,7 @@ a {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .goods__container {
-    width: 765px;
+    width: 750px;
   }
 }
 
@@ -817,7 +817,7 @@ a {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .main-advantage__container {
-    width: 765px;
+    width: 750px;
   }
 }
 
@@ -911,7 +911,7 @@ a {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .call-to-action__container {
-    width: 765px;
+    width: 750px;
   }
 }
 
@@ -978,7 +978,7 @@ a {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .advantages__container {
-    width: 765px;
+    width: 750px;
   }
 }
 
@@ -1010,7 +1010,7 @@ a {
 
 @media (max-width: 767px) {
   .advantages__item-text {
-    padding-left: 30px;
+    padding-left: 10px;
     text-align: left;
   }
 }
@@ -1029,17 +1029,14 @@ a {
 
 @media (max-width: 767px) {
   .advantages__list {
-    flex-direction: column;
     margin-top: 42px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    -ms-grid-row-align: flex-start;
-    align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 }
 
@@ -1081,6 +1078,7 @@ a {
 @media (max-width: 767px) {
   .advantages__item-wrap {
     flex-direction: row;
+    margin-right: 35px;
     margin-bottom: 32px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1235,7 +1233,7 @@ a {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .soviet__container {
-    width: 765px;
+    width: 750px;
   }
 }
 
@@ -1416,7 +1414,7 @@ a {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .footer-cta__container {
-    width: 765px;
+    width: 750px;
   }
 }
 
@@ -1429,6 +1427,10 @@ a {
 @media (max-width: 767px) {
   .footer-cta__container {
     min-height: 0;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
@@ -1532,7 +1534,7 @@ a {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .footer__container {
-    width: 765px;
+    width: 750px;
   }
 }
 

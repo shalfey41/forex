@@ -90,7 +90,7 @@
 }
 
 .offer-form {
-  width: 226px;
+  width: 260px;
   position: absolute;
   bottom: 0;
   margin-left: 564px;
@@ -111,11 +111,11 @@
     background-color: $color-primary;
     color: #fff;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     padding-top: 10px;
-    padding-bottom: 9px;
-    line-height: 15px;
+    padding-bottom: 10px;
+    line-height: 20px;
 
     @media (max-width: 767px) {
       font-size: 19px;
@@ -131,7 +131,7 @@
   }
 
   &__form {
-    padding: 10px 10px 2px;
+    padding: 16px 10px 2px;
     background-color: #fff;
 
     @media (max-width: 767px) {
@@ -145,9 +145,9 @@
       &[type="text"],
       &[type="email"],
       &[type="tel"] {
-        font-size: 12px;
+        font-size: 14px;
         border: 1px solid #aeaeae;
-        padding: 4px 7px 5px;
+        padding: 7px 7px 8px;
         margin-bottom: 10px;
 
         @media (max-width: 767px) {
@@ -165,9 +165,9 @@
       }
 
       &[type="submit"] {
-        font-size: 14px;
-        margin-top: 14px;
-        padding: 5px;
+        font-size: 16px;
+        margin-top: 16px;
+        padding: 8px;
 
         @media (max-width: 767px) {
           font-size: 19px;
@@ -186,7 +186,7 @@
 
     label {
       display: block;
-      font-size: 8px;
+      font-size: 10px;
       padding-left: 15px;
       padding-top: 3px;
       position: relative;
@@ -201,8 +201,8 @@
         position: absolute;
         top: 4px;
         left: 0;
-        width: 8px;
-        height: 8px;
+        width: 10px;
+        height: 10px;
         border: 1px solid #000;
         cursor: pointer;
 
@@ -216,8 +216,8 @@
         position: absolute;
         top: 4px;
         left: 3px;
-        width: 4px;
-        height: 6px;
+        width: 5px;
+        height: 8px;
         border: 1px solid #000;
         border-width: 0 1px 1px 0;
         transform: rotate(45deg);

@@ -33,7 +33,7 @@
 
     @media (max-width: 767px) {
       text-align: left;
-      padding-left: 30px;
+      padding-left: 10px;
     }
   }
 
@@ -43,9 +43,9 @@
     margin-top: 33px;
 
     @media (max-width: 767px) {
-      flex-direction: column;
       margin-top: 42px;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
 
     &:before {
@@ -74,6 +74,7 @@
     @media (max-width: 767px) {
       flex-direction: row;
       margin-bottom: 32px;
+      margin-right: 35px;
     }
   }
 
