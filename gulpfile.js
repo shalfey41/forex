@@ -8,6 +8,7 @@ const gulp = require('gulp'),
       sass = require('gulp-sass'),
       uncss = require('gulp-uncss'),
       rev = require('gulp-rev-append'),
+      data = require('gulp-data'),
       useref = require('gulp-useref'),
       gulpif = require('gulp-if'),
       uglify = require('gulp-uglify'),
@@ -49,10 +50,24 @@ gulp.task('sass', function() {
 
 gulp.task('jade', function () {
   return gulp.src('src/**/*.jade')
+    .pipe(data( function(file) {
+      return require('./src/languages.json');
+    }))
     .pipe(jade({
       pretty: true
     }))
     .pipe(gulp.dest('src/'))
+});
+
+gulp.task('templates', function() {
+  return gulp.src('./src/*.jade')
+    .pipe(data( function(file) {
+      return require('./src/languages.json');
+    }))
+    .pipe(jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest('./src/'));
 });
 
 // Объединяет и минифицирует css и js в html
