@@ -88,17 +88,9 @@ a:hover {
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 
-b {
-  font-weight: inherit;
-}
-
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-
-b {
-  font-weight: bolder;
-}
 
 /**
  * Add the correct font style in Android 4.3-.
@@ -511,11 +503,6 @@ a {
     padding-top: 16px;
     padding-bottom: 12px;
   }
-}
-
-.offer-form__title span {
-  font-weight: normal;
-  letter-spacing: .07em;
 }
 
 .offer-form__form {
@@ -1075,6 +1062,12 @@ a {
   align-items: center;
 }
 
+@media (min-width: 767px) {
+  .advantages__item-wrap {
+    width: 20%;
+  }
+}
+
 @media (max-width: 767px) {
   .advantages__item-wrap {
     flex-direction: row;
@@ -1331,10 +1324,6 @@ a {
   }
 }
 
-.soviet-bq__income b {
-  font-size: 18px;
-}
-
 .soviet-bq__author-country--indonesia,
 .soviet-bq__author-country--thailand,
 .soviet-bq__author-country--saudi-arabia {
@@ -1501,6 +1490,7 @@ a {
   display: block;
   margin: 46px 139px 0;
   padding: 14px 60px;
+  text-align: center;
   text-decoration: none;
 }
 

@@ -1,12 +1,14 @@
 doctype html
-html(lang="ru")
+html
   include blocks/head/head
 
   body
     <!--[if IE 8]>
-    Вы используете <strong>устаревшую версию</strong> браузера. Пожалуйста, <a href="http://browsehappy.com/">обновите браузер</a> на официальном сайте, чтобы просматривать полную версию сайта.
+    | Вы используете <strong>устаревшую версию</strong> браузера. Пожалуйста, <a href="http://browsehappy.com/">обновите браузер</a> на официальном сайте, чтобы просматривать полную версию сайта.
     <![endif]-->
     main
+      include mixin
+      +translate(jp)
       include blocks/promo/promo
       include blocks/goods/goods
       include blocks/main-advantage/main-advantage

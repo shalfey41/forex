@@ -1,0 +1,20 @@
+doctype html
+html
+  include blocks/head/head
+
+  body
+    <!--[if IE 8]>
+    | Вы используете <strong>устаревшую версию</strong> браузера. Пожалуйста, <a href="http://browsehappy.com/">обновите браузер</a> на официальном сайте, чтобы просматривать полную версию сайта.
+    <![endif]-->
+    main
+      include mixin
+      +translate(cn)
+      include blocks/promo/promo
+      include blocks/goods/goods
+      include blocks/main-advantage/main-advantage
+      include blocks/call-to-action/call-to-action
+      include blocks/advantages/advantages
+      include blocks/soviet/soviet
+      include blocks/footer-cta/footer-cta
+
+    include blocks/footer/footer

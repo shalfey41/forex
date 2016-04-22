@@ -2,18 +2,18 @@
 section.promo
   .promo__container
     .promo__offer
-      h1.promo__title Хочешь попробовать форекс без риска?
-      p.promo__text Торгуй на демо-счете лучшего брокера Ближнего Востока!
+      h1.promo__title= langText[0]
+      p.promo__text= langText[1]
 
     a.logo(href="#")
       img(src="images/logo.png", alt="Логотип")
 
     .offer-form
-      h3.offer-form__title Open an account with FBS <br>
-        span  and start making profit
+      h3.offer-form__title= langText[2]
+        //- <br> span and start making profit
       form.offer-form__form
         input(type="text", placeholder="Full name")
         input(type="email", placeholder="E-mail", required)
         input(type="checkbox", id="lisense", required, checked)
-        label(for="lisense") I accept #[a(href="#", target="_blank") Customer Agreement conditions]
+        label(for="lisense") I accept #[a(href="https://my.fbs.com/upload/agreement_ru.pdf", target="_blank") Customer Agreement conditions]
         input(type="submit", class="btn" value="Open account")
